@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Manager</class>
+ <widget class="QMainWindow" name="Manager">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>1000</width><height>650</height></rect>
+  </property>
+  <property name="windowTitle"><string>Список товаров — Менеджер</string></property>
+  <property name="styleSheet"><string notr="true">font-family: Times New Roman; font-size: 13px;</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout">
+      <item><widget class="QLabel" name="lb_fio"><property name="text"><string/></property></widget></item>
+      <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+      <item><widget class="QPushButton" name="pb_exit"><property name="text"><string>Выход</string></property><property name="maximumWidth"><number>80</number></property></widget></item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout">
+      <item><widget class="QLabel" name="lb_search"><property name="text"><string>Поиск:</string></property><property name="maximumWidth"><number>55</number></property></widget></item>
+      <item><widget class="QLineEdit" name="le_search"><property name="placeholderText"><string>Поиск по всем текстовым полям...</string></property></widget></item>
+      <item><widget class="QPushButton" name="pb_show_all"><property name="text"><string>Показать все</string></property><property name="maximumWidth"><number>110</number></property></widget></item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout">
+      <item><widget class="QLabel" name="lb_vendor"><property name="text"><string>Поставщик:</string></property><property name="maximumWidth"><number>80</number></property></widget></item>
+      <item><widget class="QComboBox" name="cb_vendor"><property name="minimumWidth"><number>170</number></property></widget></item>
+      <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property></spacer></item>
+      <item><widget class="QLabel" name="lb_sort"><property name="text"><string>Сортировка:</string></property><property name="maximumWidth"><number>85</number></property></widget></item>
+      <item><widget class="QComboBox" name="cb_sort"><property name="minimumWidth"><number>150</number></property></widget></item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QListWidget" name="lw_products"><property name="sortingEnabled"><bool>false</bool></property></widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

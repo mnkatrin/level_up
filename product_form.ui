@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProductForm</class>
+ <widget class="QWidget" name="ProductForm">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>620</width><height>600</height></rect>
+  </property>
+  <property name="windowTitle"><string>Товар</string></property>
+  <property name="styleSheet"><string notr="true">font-family: Times New Roman; font-size: 13px;</string></property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+
+   <!-- ID -->
+   <item>
+    <layout class="QHBoxLayout">
+     <item><widget class="QLabel" name="lb_id"><property name="text"><string>ID:</string></property><property name="minimumWidth"><number>160</number></property></widget></item>
+     <item><widget class="QLineEdit" name="le_id"><property name="readOnly"><bool>true</bool></property></widget></item>
+    </layout>
+   </item>
+
+   <!-- Фото -->
+   <item>
+    <layout class="QHBoxLayout">
+     <item><widget class="QLabel" name="lb_photo_title"><property name="text"><string>Фото:</string></property><property name="minimumWidth"><number>160</number></property></widget></item>
+     <item>
+      <layout class="QHBoxLayout">
+       <item>
+        <widget class="QLabel" name="lb_photo">
+         <property name="minimumSize"><size><width>150</width><height>100</height></size></property>
+         <property name="maximumSize"><size><width>150</width><height>100</height></size></property>
+         <property name="frameShape"><enum>QFrame::Box</enum></property>
+         <property name="alignment"><set>Qt::AlignCenter</set></property>
+         <property name="text"><string/></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pb_choose_photo">
+         <property name="text"><string>Выбрать фото</string></property>
+         <property name="maximumWidth"><number>120</number></property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+
+   <!-- Наименование -->
+   <item>
+    <layout class="QHBoxLayout">
+     <item><widget class="QLabel" name="lb_name"><property name="text"><string>Наименование:</string></property><property name="minimumWidth"><number>160</number></property></widget></item>
+     <item><widget class="QLineEdit" name="le_name"/></item>
+    </layout>
+   </item>
+
+   <!-- Категория -->
+   <item>
+    <layout class="QHBoxLayout">
+     <item><widget class="QLabel" name="lb_category"><property name="text"><string>Категория:</string></property><property name="minimumWidth"><number>160</number></property></widget></item>
+     <item><widget class="QComboBox" name="cb_category"/></item>
+    </layout>
+   </item>
+
+   <!-- Описание -->
+   <item>
+    <layout class="QHBoxLayout">
+     <item><widget class="QLabel" name="lb_desc"><property name="text"><string>Описание:</string></property><property name="minimumWidth"><number>160</number></property><property name="alignment"><set>Qt::AlignTop</set></property></widget></item>
+     <item>
+      <widget class="QTextEdit" name="te_description">
+       <property name="maximumHeight"><number>70</number></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+   <!-- Производитель -->
+   <item>
+    <layout class="QHBoxLayout">
+     <item><widget class="QLabel" name="lb_manufacturer"><property name="text"><string>Производитель:</string></property><property name="minimumWidth"><number>160</number></property></widget></item>
+     <item><widget class="QComboBox" name="cb_manufacturer"/></item>
+    </layout>
+   </item>
+
+   <!-- Поставщик -->
+   <item>
+    <layout class="QHBoxLayout">
+     <item><widget class="QLabel" name="lb_vendor"><property name="text"><string>Поставщик:</string></property><property name="minimumWidth"><number>160</number></property></widget></item>
+     <item><widget class="QComboBox" name="cb_vendor"/></item>
+    </layout>
+   </item>
+
+   <!-- Цена -->
+   <item>
+    <layout class="QHBoxLayout">
+     <item><widget class="QLabel" name="lb_price"><property name="text"><string>Цена (руб.):</string></property><property name="minimumWidth"><number>160</number></property></widget></item>
+     <item>
+      <widget class="QDoubleSpinBox" name="dsb_price">
+       <property name="minimum"><double>0.00</double></property>
+       <property name="maximum"><double>999999.99</double></property>
+       <property name="decimals"><number>2</number></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+   <!-- Размер (единица измерения) -->
+   <item>
+    <layout class="QHBoxLayout">
+     <item><widget class="QLabel" name="lb_size"><property name="text"><string>Размер (ед. изм.):</string></property><property name="minimumWidth"><number>160</number></property></widget></item>
+     <item><widget class="QLineEdit" name="le_size"/></item>
+    </layout>
+   </item>
+
+   <!-- Количество -->
+   <item>
+    <layout class="QHBoxLayout">
+     <item><widget class="QLabel" name="lb_quantity"><property name="text"><string>Количество на складе:</string></property><property name="minimumWidth"><number>160</number></property></widget></item>
+     <item>
+      <widget class="QSpinBox" name="sb_quantity">
+       <property name="minimum"><number>0</number></property>
+       <property name="maximum"><number>999999</number></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+   <!-- Скидка -->
+   <item>
+    <layout class="QHBoxLayout">
+     <item><widget class="QLabel" name="lb_discount"><property name="text"><string>Скидка (%):</string></property><property name="minimumWidth"><number>160</number></property></widget></item>
+     <item>
+      <widget class="QSpinBox" name="sb_discount">
+       <property name="minimum"><number>0</number></property>
+       <property name="maximum"><number>100</number></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+   <!-- Кнопки -->
+   <item>
+    <layout class="QHBoxLayout">
+     <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+     <item>
+      <widget class="QPushButton" name="pb_save">
+       <property name="text"><string>Сохранить</string></property>
+       <property name="minimumWidth"><number>100</number></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pb_cancel">
+       <property name="text"><string>Отмена</string></property>
+       <property name="minimumWidth"><number>100</number></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
